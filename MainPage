@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Waltuh</title>
+    <link rel="shortcut icon" href="Walter_White_S5B.png">
+</head>
+
+<body style="background-color:green;">
+
+
+<h1>This is a Heading</h1>
+<p style="color:red;"></pstyle>This is <br> TWO paragraphs.</p>
+<a href="https://www.youtube.com/watch?v=MRPBaGzVZwo">
+<img src="Lizard.png" title="DON'T TOUCH THE LIZARD!!!!!1!">
+</a>
+<p title="Run while you still can...">Hover your mouse over me!</p>
+<h1 style="font-size:80px;">Big text!</h1>
+
+</html>
