@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="Website3.css">
+  <script src="JavaScript3.js" defer></script>
+</head>
+<body>
+  <div>
+  <div class="background-wrapper" id="background"></div>
+  </div>
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span> <!--Modal saker-->
+  
+        <div class="tab-buttons">
+          <button id="loginTab" class="active" onclick="showTab('login')">Login</button>
+          <button id="registerTab" onclick="showTab('register')">Register</button>
+        </div>
+  
+        <div id="loginForm">
+          <h2>Login</h2>
+          <div class="form-group">
+            <input type="text" id="loginUsername" class="input" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <input type="password" id="loginPassword" class="input" placeholder="Password">
+          </div>
+          <div>
+            <input type="checkbox" id="termsCheckbox">
+            <label for="termsCheckbox">I agree to the terms and conditions</label>
+          </div>
+          <button class="btn" onclick="login()">Login</button>
+        </div>
+  
+        <div id="registerForm" style="display: none;">
+          <h2>Register</h2>
+          <div class="form-group">
+            <input type="text" id="registerUsername" class="input" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <input type="email" id="registerEmail" class="input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="password" id="registerPassword" class="input" placeholder="Password">
+          </div>
+          <button class="btn" onclick="register()">Register</button>
+        </div>
+      </div>
+    </div>
+    <ul> <!--Lista med olika saker-->
+        <li><a href="#home" onclick = "changeTextHome()">Home</a></li>
+        <li><a href="#library" onclick = "changeTextNews()">Store</a></li>
+        <li><a href="#store" onclick = "changeTextContact()">library</a></li>
+        <li><a href="#store" onclick="openModal()">Login</a></li>
+        <li><a href="#support" onclick = "changeTextAbout()">About</a></li>
+        <li><img class="main_logo" src="Vilgots_Game_Store.png" alt="Logo" /></li>
+    </ul>
+    <div id="gameSection"> <!--Alla spel menyer-->
+      <div class="card-container" style="margin-top: 7%;">
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" onclick="changeTextAction()" style="background-color: #e74c3c;">Action</div>
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" onclick="changeTextAdventure()" style="background-color: #f39c12;">Adventure</div>
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" style="background-color: #5c6bc0;">RPG</div>
+      </div>
+      <div class="card-container">
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" style="background-color: #3498db;">Shooter</div>
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" style="background-color: #e67e22;">Strategy</div>
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" style="background-color: #ecf0f1; color: #333;">Simulation</div>
+      </div>
+      <div class="card-container">
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" style="background-color: #e91e63;">Fighting</div>
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" style="background-color: #cddc39;">Racing</div>
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" style="background-color: #9c27b0;">Puzzle</div>
+      </div>
+      <div class="card-container">
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" style="background-color: #009688;">MMO</div>
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" style="background-color: #fdd835;">Platformer</div>
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" style="background-color: #616161; color: white;">Stealth</div>
+      </div>
+      <div class="card-container" style="margin-bottom: 7%;">
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" style="background-color: #000; color: white;">Horror</div>
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" style="background-color: #00bcd4;">Sports</div>
+        <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" style="background-color: #795548;">Sandbox</div>
+      </div>
+    </div>
+    
+      <footer contentEditable class="footer" id="footer">
+        <div class="footer-bar" > <!--Fotter-->
+          <div class="footer-info">
+              <div>Företagsnamn: Vilgots Game Store</div>
+              <div>Uppdaterad: 5 maj 2025</div>
+              <div>Kontakt: info@vilgotsgames.se | 070-123 45 67</div>
+              <div>Adress: Spelgatan 12, 123 45 Stockholm</div>
+          </div>
+      </div>
+      </footer>
+  </div>
+</body>
