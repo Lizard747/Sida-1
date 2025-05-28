@@ -6,7 +6,7 @@ function changeTextHome() {
     background.classList.remove("hidden");
   }
 
-  if (targetDiv) {
+  if (targetDiv) { // Ändrar sidan till hemsidan
     targetDiv.innerHTML = `
     <div class="card-container" style="margin-top: 7%;">
     <div class="w3-card w3-hover-shadow w3-padding-64 w3-center" onclick="changeTextAction()" style="background-color: #e74c3c;">Action</div>
@@ -37,18 +37,18 @@ function changeTextHome() {
   } else {
     console.error("Div with ID 'gameSection' not found.");
   }
-}
-function showShopPage({ title, price, releaseDate, rating }) {
+} 
+function showShopPage({ title, price, releaseDate, rating }) { //en funktion som tar saker från card och använder dom för att göra en shop page
   const gameSection = document.getElementById("gameSection");
   const background = document.getElementById("background");
 
   if (background) {
-    background.classList.add("hidden");
+    background.classList.add("hidden"); // gömmer backgrounden så att shop page funkar 
   }
 
   if (!gameSection) return;
 
-  let extraImageHTML = "";
+  let extraImageHTML = ""; // om det är ett spel som har en bild så tar den fram bilden
   if (title === "Shadow Rebellion") {
     extraImageHTML = `
       <img src="ShadowRebellion.webp" alt="Shadow Rebellion Image" style="width: 100%; margin-top: 2rem; border-radius: 10px;">
@@ -71,7 +71,7 @@ function showShopPage({ title, price, releaseDate, rating }) {
     <img src="BladeRush.webp" alt="Zero Protocol Image" style="width: 100%; margin-top: 2rem; border-radius: 10px;">
     `;  
   }
-  gameSection.innerHTML = `
+  gameSection.innerHTML = ` // html för shop page
     <div class="shop-page" style="font-family: Arial; padding: 2rem; position: relative; top: 5rem; max-width: 600px; margin: auto;">
       <h1 style="font-size: 2rem; margin-bottom: 1rem;">${title}</h1>
       ${extraImageHTML}      
@@ -84,7 +84,7 @@ function showShopPage({ title, price, releaseDate, rating }) {
 }
   
     
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () { //fuktionen som hämtar alla saker för shop page
   document.body.addEventListener("click", function (event) {
     const card = event.target.closest(".game-card");
     if (!card) return;
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
     
-function changeTextAction() {
+function changeTextAction() { // byter html till texten 
   const targetDiv = document.getElementById("gameSection");
   const background = document.getElementById("background");
 
@@ -123,7 +123,7 @@ function changeTextAction() {
     background.classList.remove("hidden");
   }
 
-  if (targetDiv) {
+  if (targetDiv) { //html för action spel listan
     targetDiv.innerHTML = `
       <div class="game-list" style="margin-top: 10%;">
         <div class="game-card" title="A stealth-based action game where you lead a rebellion in a dystopian past.">
@@ -184,7 +184,7 @@ function changeTextAction() {
   }
 }
 
-function changeTextAdventure() {
+function changeTextAdventure() { //All daiki, jag borde lowkey ta bort dom
   const targetDiv = document.getElementById("gameSection");
   if (targetDiv) {
     targetDiv.innerHTML = `
@@ -247,15 +247,15 @@ function changeTextAdventure() {
   ;
 }
 }
-function openModal() {
+function openModal() { //visar login/register
     document.getElementById('loginModal').style.display = 'flex';
   }
   
-  function closeModal() {
+  function closeModal() { //gömmer login/register
     document.getElementById('loginModal').style.display = 'none';
   }
   
-  function showTab(tab) {
+  function showTab(tab) { //modal saker 
     if (tab === 'login') {
       document.getElementById('loginForm').style.display = 'block';
       document.getElementById('registerForm').style.display = 'none';
@@ -269,7 +269,7 @@ function openModal() {
     }
   }
   
-  function register() {
+  function register() { //visar det som behövs för register
     let username = document.getElementById("registerUsername").value.trim();
     let email = document.getElementById("registerEmail").value.trim();
     let password = document.getElementById("registerPassword").value.trim();
@@ -281,7 +281,7 @@ function openModal() {
       return;
     }
   
-    if (!agreed) {
+    if (!agreed) { //så man kan hålla med user agreement
       alert("You must agree to the terms and conditions before registering.");
       console.log("Registration failed: Terms not agreed.");
       return;
@@ -344,7 +344,7 @@ function openModal() {
     }
   }
   
-  window.onclick = function(event) {
+  window.onclick = function(event) { // om du klickar utanför modal så stängs den.
     let modal = document.getElementById('loginModal');
     if (event.target === modal) {
       closeModal();
