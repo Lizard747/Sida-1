@@ -51,19 +51,19 @@ function showShopPage({ title, price, releaseDate, rating }) {
   let extraImageHTML = "";
   if (title === "Shadow Rebellion") {
     extraImageHTML = `
-      <img src="ShadowRebellion.WEBP" alt="Shadow Rebellion Image" style="width: 100%; margin-top: 2rem; border-radius: 10px;">
+      <img src="ShadowRebellion.webp" alt="Shadow Rebellion Image" style="width: 100%; margin-top: 2rem; border-radius: 10px;">
     `;
   }
   
 
   if (title === "Urban Fury") {
     extraImageHTML = `
-      <img src="UrbanFury.WEBP" alt="Shadow Rebellion Image" style="width: 100%; margin-top: 2rem; border-radius: 10px;">
+      <img src="UrbanFury.webp" alt="Shadow Rebellion Image" style="width: 100%; margin-top: 2rem; border-radius: 10px;">
     `;
   }
   if (title === "Zero Protocol") {
     extraImageHTML = `
-      <img src="ZeroProtocol.WEBP" alt="Zero Protocol Image" style="width: 100%; margin-top: 2rem; border-radius: 10px;">
+      <img src="ZeroProtocol.webp" alt="Zero Protocol Image" style="width: 100%; margin-top: 2rem; border-radius: 10px;">
     `;
   }
   if(title === "Blade Rush"){
