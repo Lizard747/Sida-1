@@ -68,7 +68,7 @@ function showShopPage({ title, price, releaseDate, rating }) {
   }
   if(title === "Blade Rush"){
     extraImageHTML = `
-    <img src="BladeRush.WEBP" alt="Zero Protocol Image" style="width: 100%; margin-top: 2rem; border-radius: 10px;">
+    <img src="BladeRush.webp" alt="Zero Protocol Image" style="width: 100%; margin-top: 2rem; border-radius: 10px;">
     `;  
   }
   gameSection.innerHTML = `
